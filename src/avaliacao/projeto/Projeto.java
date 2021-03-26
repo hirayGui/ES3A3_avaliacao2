@@ -6,8 +6,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
 public class Projeto {
 	
 	private int id;
@@ -50,7 +48,7 @@ public class Projeto {
 	
 	public Participacao getById(int id) {
 			return participacoes.stream()
-					.filter(trans -> trans.getId() == id)
+					.filter(proj -> proj.getId() == id)
 					.findAny()
 					.orElse(null);
 	}
