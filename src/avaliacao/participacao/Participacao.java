@@ -4,12 +4,13 @@ import java.time.LocalDate;
 
 public class Participacao {
 
-	private int id, idFuncionario;
+	private int id = 0, idFuncionario;
+	private static int countId;
 	private LocalDate dataInicio, dataTermino;
 	
-	public Participacao(int id, int idFuncionario, LocalDate dataInicio, LocalDate dataTermino) {
+	public Participacao(int idFuncionario, LocalDate dataInicio, LocalDate dataTermino) {
 		if(dataTermino.isAfter(dataInicio) == true) {
-			this.id = id;
+			this.id = countId++;
 			this.idFuncionario = idFuncionario;
 			this.dataInicio = dataInicio;
 			this.dataTermino = dataTermino;
